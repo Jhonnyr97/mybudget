@@ -5,7 +5,7 @@ services:
       context: ${backend_dir}
       dockerfile: Dockerfile.backend
     volumes:
-      - ${backend_dir}:/mybuget-backend
+      - ${backend_dir}:/mybudget-backend
     command: puma -p 4567
     ports:
       - "4567:4567"
@@ -14,7 +14,7 @@ services:
       context: ${frontend_dir}
       dockerfile: Dockerfile.frontend
     volumes:
-      - ${frontend_dir}:/mybuget-frontend
+      - ${frontend_dir}:/mybudget-frontend
     command: yarn dev
     ports:
       - "3000:3000"
